@@ -1,6 +1,6 @@
-#BASH SCRIPT
+# BASH SCRIPT
 
-##0x04. Loops, conditions and parsing Projects
+## 0x04. Loops, conditions and parsing Projects
 In this project i did bash script, and those bash scripts 
 i made all passes Shellcheck without any error.
 
@@ -8,7 +8,7 @@ shellcheck is a tool that helps to write proper Bash scripts.
 It makes recommendations on your syntax and semantics and provide 
 advice on edge cases that you might not have thought about.
 
-###Example of a bash script
+### Example of a bash script
 ```
 nguweneza@nguweneza: ls *.xml
 file1.xml  file2.xml  file3.xml
