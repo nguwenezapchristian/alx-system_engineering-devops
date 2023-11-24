@@ -8,7 +8,12 @@ were covered are:
 ### How to kill a process?
 ### What is a signal?
 ### What are the 2 signals that cannot be ignored?
-### Some examples of the Tasks i did
+### An example from the Tasks I did
 ```
-to be written
+#!/usr/bin/env bash
+# A bash script which that displays lines containing the bash word
+# shellcheck disable=SC2009
+
+pidd=$(echo $$)
+ps auxf | grep "$pidd"
 ```
