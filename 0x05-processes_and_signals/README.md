@@ -17,3 +17,8 @@ were covered are:
 pidd=$(echo $$)
 ps auxf | grep "$pidd"
 ```
+```
+OUTPUT
+nguwene+    8068  0.0  0.0   9972  3328 pts/0    S+   00:52   0:00          \_ bash ./2-show_your_bash_pid
+nguwene+    8071  0.0  0.0   9212  2432 pts/0    S+   00:52   0:00              \_ grep 8068
+```
