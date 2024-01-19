@@ -11,6 +11,6 @@ exec{ 'install-python3-pip':
 
 package { 'flask':
   ensure   => '2.1.0',
-  provider => 'pip3',
+  provider => 'usr/bin/pip3',
   require  => Exec['install-python3-pip'],
 }
