@@ -7,6 +7,6 @@ exec { 'install_flask':
 
 # Use a package resource tp maanage the flask package
 package { 'flask':
-  ensure  => 'installed',
+  ensure  => '2.1.0',
   require => Exec['install_flask'],
 }
