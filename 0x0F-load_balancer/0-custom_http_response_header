@@ -12,6 +12,6 @@ echo "Hello World!" > /usr/share/nginx/html/index.html
 mkdir -p /var/www/html
 echo "Ceci n'est pas une page" > /var/www/html/custom_404.html
 
-sudo sed -i -E "/^location \/ {/s|.*|$string|" /etc/nginx/sites-available/default
-sudo sed -i -E "/^server {/s|.*|$string2|" /etc/nginx/sites-available/default
+sudo sed -i -E "/^location \/ \{/s|.*|$string|" /etc/nginx/sites-available/default
+sudo sed -i -E "/^server \{/s|.*|$string2|" /etc/nginx/sites-available/default
 sudo service nginx start
