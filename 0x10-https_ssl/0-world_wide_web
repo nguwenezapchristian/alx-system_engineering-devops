@@ -3,7 +3,8 @@
 # Display information about subdomains.
 
 domain_info () {
-	dig "$2"."$1" | awk '/ANSWER SECTION:/ {getline; print}' | awk -v subdomain="$2" '{ print "The subdomain " subdomain " is a " $4 " record and points to " $5}'
+	dig "$2"."$1" | awk '/ANSWER SECTION:/ {getline; print}' | 
+	awk -v subdomain="$2" '{ print "The subdomain " subdomain " is a " $4 " record and points to " $5}'
 }
 
 if [ "$#" == 1 ]
