@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# a Bash script that configures a server
+
+sudo service nginx status
+
+sudo apt update
+sudo apt-get -y install nginx
+
+sudo service apache2 stop
+
+sudo service nginx restart
