@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# generates a MySQL dump and creates a compressed archive out of it
 # Set MySQL root password from command line argument
 MYSQL_ROOT_PASSWORD="$1"
 
