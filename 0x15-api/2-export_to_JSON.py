@@ -11,12 +11,12 @@ if __name__ == "__main__":
     user = requests.get(url + f"users/{userId}").json()
     todos = requests.get(url + f"todos?userId={userId}").json()
     USERNAME_NAME = user.get("username")
+    user_tasks = {userId: []}
+    for task in todos:
+        user_tasks[userId].append({
+            "task": task.get("title"),
+            "completed": task.get("completed"),
+            "username": USERNAME_NAME
+            })
     with open(f"{userId}.json", "w") as jsonfile:
-        for task in todos:
-            json.dump(
-                    {userId: [{
-                        "task": task.get("title"),
-                        "completed": task.get("completed"),
-                        "username": USERNAME_NAME
-                        }]},
-                    jsonfile)
+        json.dump(user_tasks, jsonfile)
