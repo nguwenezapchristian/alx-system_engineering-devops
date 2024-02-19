@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Gather data from an API """
+""" Gather data from an API and export to csv"""
 import csv
 import requests
 import sys
