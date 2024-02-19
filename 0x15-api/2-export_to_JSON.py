@@ -18,6 +18,5 @@ if __name__ == "__main__":
                         "task": task.get("title"),
                         "completed": task.get("completed"),
                         "username": USERNAME_NAME
-                        }]
-                        }
-                    ,jsonfile)
+                        }]},
+                    jsonfile)
