@@ -1,0 +1,68 @@
+{
+   "domainName": "nguweneza.tech",
+   "parseCode": 8,
+   "audit": {
+      "createdDate": "2024-01-24 15:21:26 UTC",
+      "updatedDate": "2024-01-24 15:21:26 UTC"
+   },
+   "registrarName": "Dotserve Inc",
+   "registrarIANAID": "1913",
+   "registryData": {
+      "createdDate": "2024-01-24T15:06:31.0Z",
+      "updatedDate": "2024-01-24T15:06:32.0Z",
+      "expiresDate": "2025-01-24T23:59:59.0Z",
+      "registrant": {
+         "organization": "N/A",
+         "state": "3002",
+         "country": "RWANDA",
+         "countryCode": "RW",
+         "rawText": "(omitted in the demo)"
+      },
+      "administrativeContact": {
+         "country": "RWANDA",
+         "countryCode": "RW",
+         "rawText": "(omitted in the demo)"
+      },
+      "billingContact": {
+         "country": "RWANDA",
+         "countryCode": "RW",
+         "rawText": "(omitted in the demo)"
+      },
+      "technicalContact": {
+         "country": "RWANDA",
+         "countryCode": "RW",
+         "rawText": "(omitted in the demo)"
+      },
+      "domainName": "nguweneza.tech",
+      "nameServers": {
+         "rawText": "(omitted in the demo)",
+         "hostNames": [
+            "CONT603385.VENUS.ORDERBOX-DNS.COM",
+            "CONT603385.MERCURY.ORDERBOX-DNS.COM",
+            "CONT603385.MARS.ORDERBOX-DNS.COM",
+            "CONT603385.EARTH.ORDERBOX-DNS.COM"
+         ],
+         "ips": []
+      },
+      "status": "(omitted in the demo)",
+      "rawText": "(omitted in the demo)",
+      "parseCode": 4091,
+      "header": "(omitted in the demo)",
+      "strippedText": "(omitted in the demo)",
+      "footer": "(omitted in the demo)",
+      "audit": {
+         "createdDate": "2024-01-24 15:21:26 UTC",
+         "updatedDate": "2024-01-24 15:21:26 UTC"
+      },
+      "registrarName": "Dotserve Inc",
+      "registrarIANAID": "1913",
+      "createdDateNormalized": "2024-01-24 15:06:31 UTC",
+      "updatedDateNormalized": "2024-01-24 15:06:32 UTC",
+      "expiresDateNormalized": "2025-01-24 23:59:59 UTC",
+      "whoisServer": "whois.dotserve.website"
+   },
+   "domainAvailability": "UNAVAILABLE",
+   "contactEmail": "abuse@dotserve.website",
+   "domainNameExt": ".tech",
+   "estimatedDomainAge": 0
+}
