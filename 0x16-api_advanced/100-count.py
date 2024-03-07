@@ -24,7 +24,8 @@ def count_words(subreddit, word_list, count_dict=None):
         count_dict = {}
 
     if not word_list:
-        sorted_counts = sorted(count_dict.items(), key=lambda x: (-x[1], x[0].lower()))
+        sorted_counts = sorted(count_dict.items(),
+                               key=lambda x: (-x[1], x[0].lower()))
         for word, count in sorted_counts:
             print(f"{word.lower()}: {count}")
         return
