@@ -3,13 +3,15 @@ package { 'nginx':
   ensure => installed,
 }
 
-# Ensure Nginx configuration file is updated to handle more concurrent connections
-file { '/etc/nginx/nginx.conf':
-  ensure  => file,
-  content => template('nginx/nginx.conf.erb'),
-  require => Package['nginx'],
-  notify  => Service['nginx'],
-}
+# Custom Nginx configuration content to increase worker_connections
+$nginx_config_content = "
+  worker_processes auto;
+  worker_connections 1024;
+  multi_accept on;
+  use epoll;
+  ...
+  # Other Nginx configuration directives
+"
 
 # Ensure Nginx service is running and enabled
 service { 'nginx':
@@ -18,19 +20,10 @@ service { 'nginx':
   subscribe => File['/etc/nginx/nginx.conf'],
 }
 
-# Custom Nginx configuration template to increase worker_connections
-# This is an example, you may need to adjust the values based on your server resources
-# For production use, consider using a more optimized configuration
+# Ensure Nginx configuration file is updated to handle more concurrent connections
 file { '/etc/nginx/nginx.conf':
   ensure  => file,
-  content => "
-    worker_processes auto;
-    worker_connections 1024;
-    multi_accept on;
-    use epoll;
-    ...
-    # Other Nginx configuration directives
-  ",
+  content => $nginx_config_content,
   require => Package['nginx'],
   notify  => Service['nginx'],
 }
