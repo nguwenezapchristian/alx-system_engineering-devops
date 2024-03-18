@@ -1,29 +1,5 @@
 # Ensure Nginx is installed
-package { 'nginx':
-  ensure => installed,
+exec { 'Limit':
+  command => '/usr/bin/env sed -i s/15/2000/ /etc/default/nginx',
 }
-
-# Custom Nginx configuration content to increase worker_connections
-$nginx_config_content = "
-  worker_processes auto;
-  worker_connections 1024;
-  multi_accept on;
-  use epoll;
-  ...
-  # Other Nginx configuration directives
-"
-
-# Ensure Nginx service is running and enabled
-service { 'nginx':
-  ensure    => running,
-  enable    => true,
-  subscribe => File['/etc/nginx/nginx.conf'],
-}
-
-# Ensure Nginx configuration file is updated to handle more concurrent connections
-file { '/etc/nginx/nginx.conf':
-  ensure  => file,
-  content => $nginx_config_content,
-  require => Package['nginx'],
-  notify  => Service['nginx'],
-}
+exec { '/usr/bin/env service nginx restart': }
