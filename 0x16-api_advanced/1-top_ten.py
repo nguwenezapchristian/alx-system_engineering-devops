@@ -18,18 +18,13 @@ def top_ten(subreddit):
     if subreddit is None or not isinstance(subreddit, str):
         print("None")
 
-    user_agent = {'User-agent': 'Google Chrome Version 81.0.4044.129'}
+    headers = {'User-agent': 'api-advanced (nguwenezacc982@gmail.com'}
     params = {'limit': 10}
     url = 'https://www.reddit.com/r/{}/hot/.json'.format(subreddit)
-
-    response = requests.get(url, headers=user_agent, params=params)
-    all_data = response.json()
-
-    try:
-        raw1 = all_data.get('data').get('children')
-
-        for i in raw1:
-            print(i.get('data').get('title'))
-
-    except:
+    response = requests.get(url, headers=headers, params=params,
+                            allow_redirects=False)
+    if response.status_code == 404:
         print("None")
+        return
+    results = response.json().get("data")
+    [print(c.get("data").get("title")) for c in results.get("children")]
